@@ -30,7 +30,6 @@ def convert_temperature():
         return
 
     temperature = float(input("Enter the temperature: "))
-
     if choice == '1':  # Celsius selected
         print(f"In Fahrenheit: {celsius_to_fahrenheit(temperature)}")
         print(f"In Kelvin: {celsius_to_kelvin(temperature)}")
