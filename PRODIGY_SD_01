@@ -1,0 +1,44 @@
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def celsius_to_kelvin(celsius):
+    return celsius + 273.15
+
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+def fahrenheit_to_kelvin(fahrenheit):
+    return (fahrenheit - 32) * 5/9 + 273.15
+
+def kelvin_to_celsius(kelvin):
+    return kelvin - 273.15
+
+def kelvin_to_fahrenheit(kelvin):
+    return (kelvin - 273.15) * 9/5 + 32
+
+def convert_temperature():
+    print("Temperature Converter")
+    print("Choose the temperature scale:")
+    print("1. Celsius")
+    print("2. Fahrenheit")
+    print("3. Kelvin")
+
+    choice = input("Enter your choice (1/2/3): ")
+
+    if choice not in ['1', '2', '3']:
+        print("Invalid choice")
+        return
+
+    temperature = float(input("Enter the temperature: "))
+
+    if choice == '1':  # Celsius selected
+        print(f"In Fahrenheit: {celsius_to_fahrenheit(temperature)}")
+        print(f"In Kelvin: {celsius_to_kelvin(temperature)}")
+    elif choice == '2':  # Fahrenheit selected
+        print(f"In Celsius: {fahrenheit_to_celsius(temperature)}")
+        print(f"In Kelvin: {fahrenheit_to_kelvin(temperature)}")
+    else:  # Kelvin selected
+        print(f"In Celsius: {kelvin_to_celsius(temperature)}")
+        print(f"In Fahrenheit: {kelvin_to_fahrenheit(temperature)}")
+
+convert_temperature()
